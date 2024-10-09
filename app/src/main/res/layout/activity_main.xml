@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- إضافة ScrollView لجعل الواجهة قابلة للتمرير عند إضافة عدة أسئلة -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Question Number:"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/question_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:text="0" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Question ID:"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/question_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:elevation="2dp"
+                android:inputType="number"
+                android:hint="Enter Question ID"
+                android:padding="12dp"
+                android:textColor="?android:attr/textColorPrimary" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Question Text:"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/question_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:elevation="2dp"
+                android:hint="Enter Question Text"
+                android:padding="12dp"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <!-- إرفاق صورة للسؤال (اختياري) -->
+            <Button
+                android:id="@+id/attach_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:elevation="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Attach Image (Optional)"
+                android:textColor="?android:attr/colorAccent" />
+
+            <!-- إدخال إجابات مع زر إرفاق صورة -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Answers:"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp" />
+
+            <!-- الحقل الأول للإجابة -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/answer_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:elevation="2dp"
+                    android:hint="Enter Answer 1"
+                    android:padding="12dp"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <Button
+                    android:id="@+id/attach_image_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:elevation="2dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Attach"
+                    android:textColor="?android:attr/colorAccent" />
+            </LinearLayout>
+
+            <!-- الحقل الثاني للإجابة -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/answer_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:elevation="2dp"
+                    android:hint="Enter Answer 2"
+                    android:padding="12dp"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <Button
+                    android:id="@+id/attach_image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:elevation="2dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Attach"
+                    android:textColor="?android:attr/colorAccent" />
+            </LinearLayout>
+
+            <!-- الحقل الثالث للإجابة -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/answer_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:elevation="2dp"
+                    android:hint="Enter Answer 3"
+                    android:padding="12dp"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <Button
+                    android:id="@+id/attach_image_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:elevation="2dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Attach"
+                    android:textColor="?android:attr/colorAccent" />
+            </LinearLayout>
+
+            <!-- الحقل الرابع للإجابة -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/answer_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:elevation="2dp"
+                    android:hint="Enter Answer 4"
+                    android:padding="12dp"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <Button
+                    android:id="@+id/attach_image_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:elevation="2dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Attach"
+                    android:textColor="?android:attr/colorAccent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- زر إضافة وزر إنهاء -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/add_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="0.5"
+            android:backgroundTint="?android:attr/colorAccent"
+            android:elevation="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="16dp"
+            android:text="Add"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="?android:attr/colorAccent"
+            android:elevation="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="16dp"
+            android:text="Preview"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
