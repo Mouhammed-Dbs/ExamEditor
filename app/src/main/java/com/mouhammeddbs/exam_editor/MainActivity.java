@@ -238,7 +238,6 @@ public class MainActivity extends AppCompatActivity {
             currentQuestionId = -1;
             addQuestion.setText("Add");
         }
-
         resetFields();
     }
 
